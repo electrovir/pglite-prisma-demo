@@ -5,7 +5,8 @@ generator client {
 
 datasource db {
     provider = "postgres"
-    url      = "./.not-committed/pglite"
+    // this URL won't actually matter or need to be populated when using PGLite
+    url      = env("DATABASE_URL")
 }
 
 model User {

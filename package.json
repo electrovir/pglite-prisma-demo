@@ -13,8 +13,8 @@
     "scripts": {
         "compile": "virmator compile",
         "format": "virmator format",
+        "postinstall": "prisma generate",
         "lint": "virmator lint fix",
-        "publish": "virmator publish npm run test:all",
         "start": "tsx src/cli.ts",
         "test": "virmator test node",
         "test:all": "npm run compile && concurrently --colors --kill-others-on-fail -c auto --names tests,spelling,format,deps,lint \"npm run test:coverage\" \"npm run test:spelling\" \"npm run test:format\" \"npm run test:deps\" \"npm run test:lint\"",
