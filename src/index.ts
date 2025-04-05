@@ -33,7 +33,7 @@ export async function runPgliteScript() {
         await prismaClient.user.create({
             data: {
                 email: 'test@example.com',
-                // eslint-disable-next-line sonarjs/no-hardcoded-credentials
+                // eslint-disable-next-line sonarjs/no-hardcoded-passwords
                 password: 'fake password here',
                 settings: {
                     create: {
